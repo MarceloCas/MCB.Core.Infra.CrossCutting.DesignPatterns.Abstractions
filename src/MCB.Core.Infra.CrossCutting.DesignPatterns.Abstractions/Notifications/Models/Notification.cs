@@ -5,16 +5,17 @@ namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Abstractions.Notifications.
 public struct Notification
 {
     // Properties
-    public NotificationType NotificationTypeMyProperty { get; }
+    public NotificationType NotificationType { get; }
     public string Code { get; }
     public string Description { get; }
 
     // Constructors
     public Notification(NotificationType notificationType, string code, string description)
     {
-        NotificationTypeMyProperty = notificationType;
+        NotificationType = notificationType;
         Code = code;
         Description = description;
     }
-
 }
+
+
