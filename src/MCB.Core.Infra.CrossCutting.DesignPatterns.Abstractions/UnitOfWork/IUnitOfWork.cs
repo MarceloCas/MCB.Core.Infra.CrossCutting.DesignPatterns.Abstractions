@@ -2,7 +2,7 @@
 
 public interface IUnitOfWork
 {
-    Task<bool> ExecuteAsync(Func<CancellationToken, Task> handler, CancellationToken cancellationToken);
-    Task<bool> ExecuteAsync<TInput>(Func<TInput?, CancellationToken, Task> handler, TInput? input, CancellationToken cancellationToken);
-    Task<(bool success, TOutput? output)> ExecuteAsync<TInput, TOutput>(Func<TInput?, CancellationToken, Task<TOutput?>> handler, TInput? input, CancellationToken cancellationToken);
+    Task<bool> ExecuteAsync(Func<(bool openTransaction, CancellationToken cancellationToken), Task> handler, bool openTransaction, CancellationToken cancellationToken);
+    Task<bool> ExecuteAsync<TInput>(Func<(TInput? input, bool openTransaction, CancellationToken cancellationToken), Task> handler, TInput? input, bool openTransaction, CancellationToken cancellationToken);
+    Task<(bool success, TOutput? output)> ExecuteAsync<TInput, TOutput>(Func<(TInput? input, bool openTransaction, CancellationToken cancellationToken), Task<TOutput?>> handler, TInput? input, bool openTransaction, CancellationToken cancellationToken);
 }
