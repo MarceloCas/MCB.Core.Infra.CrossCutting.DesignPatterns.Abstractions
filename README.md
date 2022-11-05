@@ -37,9 +37,11 @@ This project is a source code of [MCB.Core.Infra.CrossCutting.DesignPatterns.Abs
 
 - Adapter pattern abstractions
 - Factory pattern abstractions
+- Notifications pattern abstractions
+- Observer pattern abstractions
 - Resilience pattern abstractions
 - Strategy pattern abstractions
-- Observer pattern abstractions
+- Unit of Work pattern abstractions
 
 
 ## Used stack
