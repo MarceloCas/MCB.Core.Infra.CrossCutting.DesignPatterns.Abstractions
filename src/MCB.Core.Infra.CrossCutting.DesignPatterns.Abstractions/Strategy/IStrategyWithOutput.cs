@@ -2,5 +2,5 @@
 
 public interface IStrategyWithOutput<out TOutput>
 {
-    TOutput Execute();
+    TOutput? Execute();
 }

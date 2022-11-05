@@ -2,5 +2,5 @@
 
 public interface IAsyncStrategyWithInput<in TInput>
 {
-    Task ExecuteAsync(TInput input, CancellationToken cancellationToken);
+    Task ExecuteAsync(TInput? input, CancellationToken cancellationToken);
 }

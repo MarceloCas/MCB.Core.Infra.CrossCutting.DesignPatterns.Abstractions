@@ -2,5 +2,5 @@
 
 public interface IFactoryWithParameter<out T, in TParameter>
 {
-    T Create(TParameter parameter);
+    T? Create(TParameter? parameter);
 }

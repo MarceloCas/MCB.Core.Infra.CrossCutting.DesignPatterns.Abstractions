@@ -2,5 +2,5 @@
 
 public interface IAsyncStrategyWithOutput<TOutput>
 {
-    Task<TOutput> ExecuteAsync(CancellationToken cancellationToken);
+    Task<TOutput?> ExecuteAsync(CancellationToken cancellationToken);
 }

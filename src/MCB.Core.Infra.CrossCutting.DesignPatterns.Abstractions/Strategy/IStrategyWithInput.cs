@@ -2,5 +2,5 @@
 
 public interface IStrategyWithInput<in TInput>
 {
-    void Execute(TInput input);
+    void Execute(TInput? input);
 }

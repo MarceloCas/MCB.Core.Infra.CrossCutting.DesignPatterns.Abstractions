@@ -2,5 +2,5 @@
 
 public interface IStrategyWithInputAndOutput<in TInput, out TOutput>
 {
-    TOutput Execute(TInput input);
+    TOutput? Execute(TInput? input);
 }
