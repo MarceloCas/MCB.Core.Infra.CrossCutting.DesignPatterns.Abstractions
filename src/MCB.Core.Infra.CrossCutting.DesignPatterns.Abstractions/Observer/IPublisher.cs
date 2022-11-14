@@ -6,5 +6,5 @@ public interface IPublisher
     void Subscribe<TSubscriber>(Type subjectType);
     void Subscribe<TSubscriber, TSubject>() where TSubscriber : ISubscriber<TSubject>;
     Task PublishAsync<TSubject>(TSubject subject, CancellationToken cancellationToken);
-    Task PublishAsync(object subject, Type subjectType, CancellationToken cancellationToken);
+    Task PublishAsync<TSubject>(TSubject subject, Type subjectCustomType, CancellationToken cancellationToken);
 }
