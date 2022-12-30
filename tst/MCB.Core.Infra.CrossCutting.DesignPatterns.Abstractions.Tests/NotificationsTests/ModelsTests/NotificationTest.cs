@@ -2,6 +2,7 @@
 using MCB.Core.Infra.CrossCutting.DesignPatterns.Abstractions.Notifications.Models;
 using MCB.Core.Infra.CrossCutting.DesignPatterns.Abstractions.Notifications.Models.Enums;
 using System;
+using System.Linq;
 using Xunit;
 
 namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Abstractions.Tests.NotificationsTests.ModelsTests;
@@ -29,7 +30,7 @@ public class NotificationTest
         var description = Guid.NewGuid().ToString();
 
         // Act
-        var notification = new Notification(notificationType, code, description);
+        var notification = new Notification(notificationType, code, description, Enumerable.Empty<Notification>());
 
         // Assert
         notification.NotificationType.Should().Be(notificationType);
