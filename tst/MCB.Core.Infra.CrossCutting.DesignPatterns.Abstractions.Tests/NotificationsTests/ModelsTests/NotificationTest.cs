@@ -30,11 +30,18 @@ public class NotificationTest
         var description = Guid.NewGuid().ToString();
 
         // Act
-        var notification = new Notification(notificationType, code, description, Enumerable.Empty<Notification>());
+        var notification = new Notification(notificationType, code, description);
+        var notification2 = new Notification(notificationType, code, description, Enumerable.Empty<Notification>());
 
         // Assert
         notification.NotificationType.Should().Be(notificationType);
         notification.Code.Should().Be(code);
         notification.Description.Should().Be(description);
+        notification.NotificationCollection.Should().BeNull();
+
+        notification2.NotificationType.Should().Be(notificationType);
+        notification2.Code.Should().Be(code);
+        notification2.Description.Should().Be(description);
+        notification2.NotificationCollection.Should().BeEmpty();
     }
 }

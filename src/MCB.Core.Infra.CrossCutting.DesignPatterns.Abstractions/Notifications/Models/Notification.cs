@@ -8,9 +8,15 @@ public readonly struct Notification
     public NotificationType NotificationType { get; }
     public string Code { get; }
     public string Description { get; }
-    public IEnumerable<Notification> NotificationCollection { get; }
+    public IEnumerable<Notification>? NotificationCollection { get; }
 
     // Constructors
+    public Notification(NotificationType notificationType, string code, string description)
+    {
+        NotificationType = notificationType;
+        Code = code;
+        Description = description;
+    }
     public Notification(NotificationType notificationType, string code, string description, IEnumerable<Notification> notificationCollection)
     {
         NotificationType = notificationType;
