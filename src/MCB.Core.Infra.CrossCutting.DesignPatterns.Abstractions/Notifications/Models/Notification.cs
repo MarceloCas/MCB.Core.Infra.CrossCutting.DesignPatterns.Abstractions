@@ -2,7 +2,7 @@
 
 namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Abstractions.Notifications.Models;
 
-public readonly struct Notification
+public readonly record struct Notification
 {
     // Properties
     public NotificationType NotificationType { get; }

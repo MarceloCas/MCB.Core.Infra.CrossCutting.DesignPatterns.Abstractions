@@ -1,6 +1,6 @@
 ﻿namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Abstractions.Resilience.Models;
 
-public struct ResiliencePolicyConfig
+public record struct ResiliencePolicyConfig
 {
     // Constants
     public const string DEFAULT_NAME_PATTERN = "Resilience Policy [{0}]";
